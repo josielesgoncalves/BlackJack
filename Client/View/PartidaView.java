@@ -300,7 +300,8 @@ public class PartidaView extends JFrame {
         		JOptionPane.showMessageDialog(null, "Saldo atualizado: " + resposta.getMessage(), "Mensagem" ,
     					JOptionPane.INFORMATION_MESSAGE);
         		
-        	
+        	this.setVisible(false);
+        	new PartidasView(cliente).setVisible(true);
         }
     }
 
@@ -313,19 +314,20 @@ public class PartidaView extends JFrame {
         	cliente.enviar(solicitacao);
 
         	this.setVisible(false);
+        	new PartidasView(cliente).setVisible(true);
         }                 
     }  
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private  JButton btnAbandonar;
-    private  JButton btnApostar;
-    private  JButton btnComprar;
-    private  JButton btnIniciar;
-    private  JButton btnPassar;
-    private  JSeparator jSeparator1;
-    private  JSeparator jSeparator2;
-    private  JLabel lbApostar;
-    private  JLabel lbJogador1;
-    private  JTextField txtMoedas;
+    private JButton btnAbandonar;
+    private JButton btnApostar;
+    private JButton btnComprar;
+    private JButton btnIniciar;
+    private JButton btnPassar;
+    private JSeparator jSeparator1;
+    private JSeparator jSeparator2;
+    private JLabel lbApostar;
+    private JLabel lbJogador1;
+    private JTextField txtMoedas;
     // End of variables declaration//GEN-END:variables
 }

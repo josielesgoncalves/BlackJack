@@ -214,11 +214,7 @@ public class CadastroUsuarioView extends JFrame {
         }
     }//GEN-LAST:event_btnCancelarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    
-
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private JButton btnCadastrar;
     private JButton btnCancelar;

@@ -89,6 +89,7 @@ public class ListaEncadeada<X>
     
     
     /**
+     * @return No
      * O metodo busca elemento na lista encadeada
      */
     public No pega(X item) {
@@ -114,6 +115,7 @@ public class ListaEncadeada<X>
     }
 
     /**
+     * @param X
      * O metodo remove elemento da lista encadeada
      */
     public void remove(X item) {
@@ -139,6 +141,7 @@ public class ListaEncadeada<X>
     }
     
     /**
+     * @return boolean
      * O metodo se lista encadeada esta vazia
      */
     public boolean vazio() {
@@ -149,6 +152,7 @@ public class ListaEncadeada<X>
     }
     
     /**
+     * @return boolean
      * O metodo verifica se a lista encadeada contem o elemento desejado
      */
     public boolean contem(X _info) 
@@ -163,6 +167,7 @@ public class ListaEncadeada<X>
     }
     
     /**
+     * @return int
      * O metodo retorna a quantidade de elementos que a lista encadeada possui
      */
     public int tamanho(){ return tamanho; }

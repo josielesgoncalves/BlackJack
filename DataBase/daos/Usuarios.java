@@ -12,7 +12,9 @@ import dbo.Usuario;
 public class Usuarios 
 {
 	/**
-	 * Returna boolean.
+	 * @return boolean
+	 * @param String email
+	 * @throws java.lang.Exception
 	 * O método verifica se o usuário já possui cadastrado no banco de dados
 	 */
 	public boolean cadastrado(String email) throws Exception {
@@ -36,6 +38,8 @@ public class Usuarios
 	}
 
 	/**	 
+	 * @param Usuario usuario
+	 * @throws java.lang.Exception
 	 * O método permite que um novo usuário seja inserido no banco de dados.
 	 */
 	public void inserir(Usuario usuario) throws Exception {
@@ -62,6 +66,8 @@ public class Usuarios
 	}
 
 	/**	 
+	 * @param String email
+	 * @throws java.lang.Exception
 	 * O método permite que um usuário seja excluido no banco de dados.
 	 */
 	public void excluir(String email) throws Exception {
@@ -84,7 +90,9 @@ public class Usuarios
 		}
 	}
 
-	/**	 
+	/**	
+	 * @param Usuario usuario 
+	 * @throws java.lang.Exception
 	 * O método permite que os dados do usuário sejam alterados e salvos no banco de dados.
 	 */
 	public void alterar(Usuario usuario) throws Exception {
@@ -114,7 +122,9 @@ public class Usuarios
 	}
 
 	/**
-	 * Retorna um usuário.	 
+	 * @param String email	
+	 * @return Usuario
+	 * @throws java.lang.Exception 
 	 * O método permite que os dados do usuário sejam puxados do banco de dados através do email.
 	 */
 	public Usuario getUsuario(String email) throws Exception {
@@ -145,7 +155,8 @@ public class Usuarios
 	}
 
 	/**
-	 * Retorna todos os usuários cadastrados.	 
+	 * @return Lista de Usuarios	
+	 * @throws java.lang.Exception 
 	 * O método permite que os todos os dados de todos os usuários sejam puxados do banco de dados.
 	 */
 	public MeuResultSet getUsuarios() throws Exception {

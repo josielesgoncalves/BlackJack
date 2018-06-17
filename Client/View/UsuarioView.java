@@ -110,10 +110,6 @@ public class UsuarioView extends javax.swing.JFrame {
                 
     }//GEN-LAST:event_btnSairActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnJogar;
     private javax.swing.JButton btnSair;

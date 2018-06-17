@@ -41,6 +41,7 @@ public class Cliente extends Jogador {
 	}
 	
 	/**
+	 * @return Solicitacao
 	 * O método retorna o tipo de resposta que o seridor enviou ao cliente.     
 	 */
 	public Solicitacao receber() { return resposta;	}

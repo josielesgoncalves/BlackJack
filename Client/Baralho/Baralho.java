@@ -36,6 +36,7 @@ public class Baralho implements Serializable
 		Collections.shuffle(cartas);
 	}
 	/**
+	* @return Carta
 	* O metodo pega a carta que estao no topo da pilha de baralho
 	*/
 	public Carta comprarCarta() 
@@ -44,13 +45,14 @@ public class Baralho implements Serializable
 		return cartas.remove(topo);	
 	}
 	/**
-	 * 
+	 * @return int
 	 * Retorna o numero de cartas que ainda estao na mesa
 	 */
 	public int topo() { return topo; }
 	
 
 	/**
+	 * @return bool
 	 * Verifica se a pilha de baralho esta vazia 
 	 */
 	public boolean baralhoVazio(){return cartas.isEmpty();}

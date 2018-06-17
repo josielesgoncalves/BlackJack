@@ -13,7 +13,9 @@ public class PartidasView extends javax.swing.JFrame {
 	
     private String nomePartida;
     
-    DefaultListModel<String> model;   
+    DefaultListModel<String> modelNaoIniciadas;   
+    DefaultListModel<String> modelIniciadas; 
+    
     private Cliente cliente;
     
     @SuppressWarnings("deprecation")
@@ -23,7 +25,8 @@ public class PartidasView extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         
         
-        model = new DefaultListModel<String>();
+        modelNaoIniciadas = new DefaultListModel<String>();
+        modelIniciadas = new DefaultListModel<String>();
         
         String _nome = cliente.getNome();
         String _moedas = String.valueOf(cliente.getMoedas());
@@ -44,13 +47,13 @@ public class PartidasView extends javax.swing.JFrame {
         	
         	if(statusPartida.equals("INICIADA"))
         	{
-        		model.addElement(nomePartida);
-                jListIniciadas.setModel(model);
+        		modelIniciadas.addElement(nomePartida);
+                jListIniciadas.setModel(modelIniciadas);
         	}
         	else
         	{
-                model.addElement(nomePartida);
-                jListEmEspera.setModel(model);  		
+                modelNaoIniciadas.addElement(nomePartida);
+                jListEmEspera.setModel(modelNaoIniciadas);  		
         	}
         	
         	solicitacao = new Solicitacao("PAR"); 
@@ -184,8 +187,8 @@ public class PartidasView extends javax.swing.JFrame {
             if(resposta.getComando().equals("SUC"))
             {
         		String novaPartida = resposta.getMessage();
-                model.addElement(novaPartida);
-                jListEmEspera.setModel(model);
+                modelNaoIniciadas.addElement(novaPartida);
+                jListEmEspera.setModel(modelNaoIniciadas);
             	                
             }
             else

@@ -1,5 +1,8 @@
 package dbo;
 
+/**
+* A classe implementa os métodos getters e setters para as variáveis que serão usadas para conectar ou cadastrar um usuário. 
+*/
 public class Usuario {
 	private String email;
 	private String nome;

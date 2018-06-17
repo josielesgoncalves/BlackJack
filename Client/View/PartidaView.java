@@ -1,13 +1,12 @@
 package View;
 
 import Principal.*;
-import javax.swing.*;
+import  javax.swing.*;
 import java.awt.HeadlessException;
-
 /**
  * Esta classe cria a tela onde ser� exibida a partida selecionada pelo jogador.
  */
-public class PartidaView extends javax.swing.JFrame {
+public class PartidaView extends JFrame {
 	private static final long serialVersionUID = 1L;
     
 	private String partida;
@@ -27,18 +26,18 @@ public class PartidaView extends javax.swing.JFrame {
     
     private void initComponents() {
 
-        btnIniciar = new javax.swing.JButton();
-        btnComprar = new javax.swing.JButton();
-        btnAbandonar = new javax.swing.JButton();
-        btnPassar = new javax.swing.JButton();
-        txtMoedas = new javax.swing.JTextField();
-        btnApostar = new javax.swing.JButton();
-        lbApostar = new javax.swing.JLabel();
-        lbJogador1 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
+        btnIniciar = new JButton();
+        btnComprar = new JButton();
+        btnAbandonar = new JButton();
+        btnPassar = new JButton();
+        txtMoedas = new JTextField();
+        btnApostar = new JButton();
+        lbApostar = new JLabel();
+        lbJogador1 = new JLabel();
+        jSeparator1 = new JSeparator();
+        jSeparator2 = new JSeparator();
         
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation( WindowConstants.EXIT_ON_CLOSE);
         setTitle("Partida");
         setBackground(new java.awt.Color(0, 153, 0));
         setSize(new java.awt.Dimension(600, 400));
@@ -64,7 +63,7 @@ public class PartidaView extends javax.swing.JFrame {
             }
         });
 
-        btnPassar.setText("Parar compra de cartas");
+        btnPassar.setText("Parar de comprar");
         btnPassar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPassarActionPerformed(evt);
@@ -82,62 +81,62 @@ public class PartidaView extends javax.swing.JFrame {
         
         lbJogador1.setText("");
 
-        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator1.setOrientation( SwingConstants.VERTICAL);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         GroupLayout layout = new  GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup( GroupLayout.Alignment.LEADING)
+            .addGroup( GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup( GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(117, 117, 117)
                         .addComponent(lbApostar))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jSeparator2,  GroupLayout.PREFERRED_SIZE, 556,  GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(203, 203, 203)
-                        .addComponent(txtMoedas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMoedas,  GroupLayout.PREFERRED_SIZE, 60,  GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap( LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnApostar))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(lbJogador1, javax.swing.GroupLayout.PREFERRED_SIZE, 524, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnComprar, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAbandonar, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPassar, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lbJogador1,  GroupLayout.PREFERRED_SIZE, 524,  GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap( LayoutStyle.ComponentPlacement.RELATED,  GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jSeparator1,  GroupLayout.PREFERRED_SIZE, 10,  GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap( LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup( GroupLayout.Alignment.LEADING)
+                    .addComponent(btnComprar,  GroupLayout.PREFERRED_SIZE, 145,  GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnIniciar,  GroupLayout.PREFERRED_SIZE, 145,  GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAbandonar,  GroupLayout.PREFERRED_SIZE, 145,  GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPassar,  GroupLayout.PREFERRED_SIZE, 145,  GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            layout.createParallelGroup( GroupLayout.Alignment.LEADING)
+            .addGroup( GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(55, 55, 55)
                 .addComponent(btnIniciar)
                 .addGap(65, 65, 65)
                 .addComponent(btnComprar)
                 .addGap(59, 59, 59)
                 .addComponent(btnPassar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addPreferredGap( LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                 .addComponent(btnAbandonar)
                 .addGap(91, 91, 91))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup( GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(lbApostar, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbApostar,  GroupLayout.PREFERRED_SIZE, 52,  GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jSeparator2,  GroupLayout.PREFERRED_SIZE, 9,  GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap( LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup( GroupLayout.Alignment.BASELINE)
                     .addComponent(btnApostar)
-                    .addComponent(txtMoedas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtMoedas,  GroupLayout.PREFERRED_SIZE,  GroupLayout.DEFAULT_SIZE,  GroupLayout.PREFERRED_SIZE))
                 .addGap(62, 62, 62)
-                .addComponent(lbJogador1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(lbJogador1,  GroupLayout.PREFERRED_SIZE, 218,  GroupLayout.PREFERRED_SIZE)
+                .addContainerGap( GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jSeparator1)
         );
 
@@ -164,9 +163,7 @@ public class PartidaView extends javax.swing.JFrame {
         if(!visible)
         	lbApostar.setText("Quantas moedas voce quer apostar?");               
         else
-        	lbApostar.setText("Partida " + partida);
-        	
-    	
+        	lbApostar.setText("Partida " + partida);  
     }
     
     /**
@@ -232,23 +229,26 @@ public class PartidaView extends javax.swing.JFrame {
 					JOptionPane.INFORMATION_MESSAGE);
         	setEnabledButtons(true);
         	
-        	solicitacao = new Solicitacao("COM");            
+        	solicitacao = new Solicitacao("COM", cliente.getEmail());            
         	cliente.enviar(solicitacao);
                 
             resposta = cliente.receber();
             if(resposta.getComando().equals("CAR"))
             {
-            	cartas = resposta.getMessage() + " ";
-            	lbJogador1.setText(cartas);
-            	
-                solicitacao = new Solicitacao("COM");                
+            	cartas = resposta.getComplemento1() + "<br>";
+            	String pontos =  resposta.getComplemento2();
+            	             	
+                solicitacao = new Solicitacao("COM", cliente.getEmail());                
                 cliente.enviar(solicitacao);
                 
                 resposta = cliente.receber();
                 if(resposta.getComando().equals("CAR"))
                 {
-                	cartas += resposta.getMessage();
-                	lbJogador1.setText(cartas);                	
+                	cartas += " " + resposta.getComplemento1()  + "<br>";
+                	pontos =  resposta.getComplemento2();
+                	                	
+                	lbJogador1.setText("<html>Pontos: "+ pontos + "<br>" + cartas +"</html>");          
+                	System.out.println("Voce possui: " + cartas);
                 }
                 
                 JOptionPane.showMessageDialog(null, "Voce possui duas cartas" , "Mensagem" ,
@@ -267,9 +267,11 @@ public class PartidaView extends javax.swing.JFrame {
 
         Solicitacao resposta = cliente.receber(); 
         if(resposta.getComando().equals("CAR"))
-        {
-        	cartas += resposta.getMessage() + " ";
-        	lbJogador1.setText(cartas);
+        {        	
+        	cartas += " " + resposta.getComplemento1()  + "<br>";
+        	String pontos =  resposta.getComplemento2();
+        	        	
+        	lbJogador1.setText("<html>Pontos: "+ pontos + "<br>" + cartas +"</html>");
         	System.out.println("Voce possui: " + cartas);
         }
         
@@ -281,7 +283,25 @@ public class PartidaView extends javax.swing.JFrame {
         cliente.enviar(solicitacao);
         Solicitacao resposta = cliente.receber();
         
-        System.out.println(resposta.getComando());
+        System.out.println(resposta.getMessage());
+        
+        if(resposta.getComando().equals("ERR"))
+        	JOptionPane.showMessageDialog(null, resposta.getMessage() + " Clique novamente no botao para verificar se a partida foi finalizada" , "Mensagem" ,
+					JOptionPane.INFORMATION_MESSAGE);
+        else
+        {
+        	if(resposta.getComando().equals("WIN"))
+        	{
+        		String vencedor = "Vencedor: Nome: " + resposta.getComplemento1() + ", Email: " + resposta.getComplemento2();
+        		JOptionPane.showMessageDialog(null, vencedor, "Mensagem" ,
+    					JOptionPane.INFORMATION_MESSAGE);
+        	}
+        	else
+        		JOptionPane.showMessageDialog(null, "Saldo atualizado: " + resposta.getMessage(), "Mensagem" ,
+    					JOptionPane.INFORMATION_MESSAGE);
+        		
+        	
+        }
     }
 
     private void btnAbandonarActionPerformed(java.awt.event.ActionEvent evt) {                                             
@@ -291,22 +311,21 @@ public class PartidaView extends javax.swing.JFrame {
         {
         	Solicitacao solicitacao = new Solicitacao("SAI", cliente.getEmail());
         	cliente.enviar(solicitacao);
-        	//cliente.desconectar();
 
         	this.setVisible(false);
         }                 
     }  
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAbandonar;
-    private javax.swing.JButton btnApostar;
-    private javax.swing.JButton btnComprar;
-    private javax.swing.JButton btnIniciar;
-    private javax.swing.JButton btnPassar;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JLabel lbApostar;
-    private javax.swing.JLabel lbJogador1;
-    private javax.swing.JTextField txtMoedas;
+    private  JButton btnAbandonar;
+    private  JButton btnApostar;
+    private  JButton btnComprar;
+    private  JButton btnIniciar;
+    private  JButton btnPassar;
+    private  JSeparator jSeparator1;
+    private  JSeparator jSeparator2;
+    private  JLabel lbApostar;
+    private  JLabel lbJogador1;
+    private  JTextField txtMoedas;
     // End of variables declaration//GEN-END:variables
 }

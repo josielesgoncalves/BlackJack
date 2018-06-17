@@ -121,21 +121,21 @@ public class ListaEncadeada<X>
     	No anterior = null; /*objeto para o elemento anterior*/
     	No n = primeiro; /*objeto para percorrer a lista*/
     	
-    	while(n != null && n.getProximo().getInfo() != item) /*procura elemento na lista, guardando anterior*/
-    	{
-    		anterior = n;
-    		n = n.getProximo();
-    	}
-    	
     	if(n == null)  /*verifica se achou elemento*/
     		return; /*nao achou: mantem no da forma como esta*/
+    	
+    	while(n!= null && n.getInfo() != item) /*procura elemento na lista, guardando anterior*/
+    	{
+    		anterior = n;
+    		n = n.getProximo(); 
+    	}
     	
     	if(anterior == null)
     		primeiro = n.getProximo(); /*retira elemento do inicio*/
     	else
     		anterior.setProximo(n.getProximo()); /*retira elemento do meio da lista*/ 
     	
-    	tamanho--;
+    	tamanho--;   	
     }
     
     /**

@@ -6,9 +6,15 @@ import Principal.BD;
 import core.*;
 import dbo.Usuario;
 
+/**
+ * A classe permite que sejam criados os métodos que rodas comandos SQL. 
+ */
 public class Usuarios 
 {
-	
+	/**
+	 * Returna boolean.
+	 * O método verifica se o usuário já possui cadastrado no banco de dados
+	 */
 	public boolean cadastrado(String email) throws Exception {
 		
 		boolean retorno = false;
@@ -29,6 +35,9 @@ public class Usuarios
 		return retorno;
 	}
 
+	/**	 
+	 * O método permite que um novo usuário seja inserido no banco de dados.
+	 */
 	public void inserir(Usuario usuario) throws Exception {
 		if (usuario == null)
 			throw new Exception("Usuario nao fornecido");
@@ -52,6 +61,9 @@ public class Usuarios
 		}
 	}
 
+	/**	 
+	 * O método permite que um usuário seja excluido no banco de dados.
+	 */
 	public void excluir(String email) throws Exception {
 		if (!cadastrado(email))
 			throw new Exception("Nao cadastrado");
@@ -72,6 +84,9 @@ public class Usuarios
 		}
 	}
 
+	/**	 
+	 * O método permite que os dados do usuário sejam alterados e salvos no banco de dados.
+	 */
 	public void alterar(Usuario usuario) throws Exception {
 		if (usuario == null)
 			throw new Exception("Usuario nao fornecido");
@@ -82,9 +97,7 @@ public class Usuarios
 		try {
 			String sql;
 
-			sql = "UPDATE bjUser "
-				+ "SET NOME = ?, SENHA=?, MOEDAS=?"
-				+ "WHERE EMAIL = ?;";
+			sql = "UPDATE bjUser SET NOME = ?, SENHA = ?, MOEDAS = ? WHERE EMAIL = ?;";
 
 			BD.COMANDO.prepareStatement(sql);
 
@@ -100,6 +113,10 @@ public class Usuarios
 		}
 	}
 
+	/**
+	 * Retorna um usuário.	 
+	 * O método permite que os dados do usuário sejam puxados do banco de dados através do email.
+	 */
 	public Usuario getUsuario(String email) throws Exception {
 		Usuario usuario = null;
 
@@ -127,6 +144,10 @@ public class Usuarios
 		return usuario;
 	}
 
+	/**
+	 * Retorna todos os usuários cadastrados.	 
+	 * O método permite que os todos os dados de todos os usuários sejam puxados do banco de dados.
+	 */
 	public MeuResultSet getUsuarios() throws Exception {
 		MeuResultSet resultado = null;
 

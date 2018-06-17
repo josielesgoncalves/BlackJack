@@ -2,6 +2,9 @@ import Principal.*;
 import java.io.*;
 import java.net.Socket;
 
+/**
+* Thread que recebe as solicitacoes do cliente enviadas via Socket
+*/
 public class ServerThread extends Thread {
     
     private Socket conexao;

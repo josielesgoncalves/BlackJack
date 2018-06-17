@@ -1,32 +1,29 @@
 package View;
 
-
 import Principal.*;
+import javax.swing.*;
 
-import javax.swing.JOptionPane;
-
-public class CadastroUsuarioView extends javax.swing.JFrame {
+public class CadastroUsuarioView extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
 	private Cliente cliente;
     public CadastroUsuarioView() {
     	initComponents();
-        this.setLocationRelativeTo(null);
-        
+        this.setLocationRelativeTo(null);        
     }
 
    private void initComponents() {
-	   jLabel1 = new javax.swing.JLabel();
-	   jLabel2 = new javax.swing.JLabel();
-	   jLabel3 = new javax.swing.JLabel();
-	   jLabel4 = new javax.swing.JLabel();
-	   jLabel5 = new javax.swing.JLabel();
-	   txtEmail = new javax.swing.JTextField();
-	   txtNome = new javax.swing.JTextField();
-	   txtSenha = new javax.swing.JPasswordField();
-	   txtConfirmaSenha = new javax.swing.JPasswordField();
-	   btnCadastrar = new javax.swing.JButton();
-	   btnCancelar = new javax.swing.JButton();
+	   jLabel1 = new JLabel();
+	   jLabel2 = new JLabel();
+	   jLabel3 = new JLabel();
+	   jLabel4 = new JLabel();
+	   jLabel5 = new JLabel();
+	   txtEmail = new JTextField();
+	   txtNome = new JTextField();
+	   txtSenha = new JPasswordField();
+	   txtConfirmaSenha = new JPasswordField();
+	   btnCadastrar = new JButton();
+	   btnCancelar = new JButton();
 	
 	    setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 	
@@ -223,16 +220,16 @@ public class CadastroUsuarioView extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCadastrar;
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JPasswordField txtConfirmaSenha;
-    private javax.swing.JTextField txtEmail;
-    private javax.swing.JTextField txtNome;
-    private javax.swing.JPasswordField txtSenha;
+    private JButton btnCadastrar;
+    private JButton btnCancelar;
+    private JLabel jLabel1;
+    private JLabel jLabel2;
+    private JLabel jLabel3;
+    private JLabel jLabel4;
+    private JLabel jLabel5;
+    private JPasswordField txtConfirmaSenha;
+    private JTextField txtEmail;
+    private JTextField txtNome;
+    private JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables
 }

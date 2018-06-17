@@ -3,6 +3,9 @@ package Principal;
 import core.MeuPreparedStatement;
 import daos.Usuarios;
 
+/**
+ * A classe cria a conexão com o bando de dados.    
+ */
 public class BD {
 	public static final MeuPreparedStatement COMANDO;
 	public static final Usuarios USUARIOS;

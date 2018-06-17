@@ -14,7 +14,7 @@ public class Jogador extends Usuario
     private int pontuacao;    
     private boolean parouJogar;
     private Partida partida;
-    
+    private boolean isVencedor;    
 	
 	/**
      * O construtor herda da classe usuario dados que um jogador precisa
@@ -39,6 +39,9 @@ public class Jogador extends Usuario
     
     public Partida getPartida() { return partida; }
 	public void setPartida(Partida partida) { this.partida = partida; }
+
+	public boolean isVencedor() { return isVencedor; }
+	public void setVencedor(boolean isVencedor) { this.isVencedor = isVencedor;	}
 
  
 }

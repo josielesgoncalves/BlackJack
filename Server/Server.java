@@ -3,26 +3,33 @@ import Principal.*;
 import Partida.*;
 import Util.ListaEncadeada;
 
+/**
+* A classe recebe pedidos de conexoes enviadas pelo cliente para efetuar o tratamento das solicitações
+* feitas por ele.
+* Tambem controla as partidas que sao criadas pelo cliente, alem de ser responsavel pelo start
+* da thread aberta
+*/
 public class Server 
 {	
-	private int port;
+	
 	private Socket conexao;
 	
-	//TODO: guardar lista de cliente conectados atraves do email. Toda vez que quiser buscar informacao desse cliente, verificar pelo email dele
 	public static ListaEncadeada<Cliente> JOGADORES = new ListaEncadeada<Cliente>();	 
 	public static ListaEncadeada<Partida> PARTIDAS = new ListaEncadeada<Partida>();
-	public static int ITERADOR = 0;
+	public static int ITERADOR_PARTIDAS = 0;
 	
-	public Server(int _port) { port = _port; }
+	public Server() {}
 		
 	public void start()
 	{
 		try 
-		{	if(ITERADOR == PARTIDAS.tamanho())
-				ITERADOR = 0;
+		{
+			for(int i = 0; i < PARTIDAS.tamanho(); i++)
+				if(PARTIDAS.pega(i).getTotalJogadores() == 0)
+					PARTIDAS.remove(PARTIDAS.pega(i));		
 		
 			@SuppressWarnings("resource")
-			ServerSocket pedido = new ServerSocket(port);
+			ServerSocket pedido = new ServerSocket(MainServer.PORT);
 	        while(true) 
 	        {
 	            conexao = pedido.accept();
@@ -34,6 +41,5 @@ public class Server
 		} catch (Exception e) {
 			System.err.println("Problemas em subir o servidor");
 		}
-	}	
-	
+	}
 }

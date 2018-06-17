@@ -1,5 +1,8 @@
 import java.io.*;
 
+/**
+ * A classe AssassinoDeServidor tem a funcao de derrubar o servidor digitando uma chave
+ */
 public class AssassinoDeServidor extends Thread {
     
     public void run() {

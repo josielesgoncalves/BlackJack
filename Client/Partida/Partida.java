@@ -16,9 +16,7 @@ public class Partida
     private StatusPartida status;
     private Baralho baralho;
     private int moedasApostadas;
-    public final int maxJogadores = 8;
-    public final int minJogadores = 3;
-
+    
     /**
      * O construtor seta o nome da partida, o status e o baralho
      */
